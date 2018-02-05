@@ -26,7 +26,7 @@
       sh "docker build -t ${DOCKERHUB_USERNAME}/cd-demo:${BUILD_NUMBER} ."
     }
     stage("Publish") {
-      withDockerRegistry([credentialsId: 'dungnx102', url: "https://hub.docker.com"]) {
+      withDockerRegistry([credentialsId: 'dungnx102@gmail.com', url: "https://hub.docker.com"]) {
         sh "docker push ${DOCKERHUB_USERNAME}/cd-demo:${BUILD_NUMBER}"
       }
     }
